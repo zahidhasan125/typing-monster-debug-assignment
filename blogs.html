@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
-      rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+    rel="stylesheet"
     />
   </head>
   <body>
@@ -20,22 +20,35 @@
     </div>
     <h1 class="title"><img src="./logo.png" /></h1>
 
-    <div class="blog-container">
+    <div class="box-container">
         <article class="article">
-            <h2 class="article-title">Difference between Local Storage and Session Storage.</h2>
-            <p class="article-text"></p>
+            <h5 class="article-title">Difference between Local Storage and Session Storage.</h5>
+            <p class="article-text"><span class="point-name">Local Storage:</span> Local Storage Data does not expires on tab or browser closed. Local Storage data can Read Write or modify from users end.</p>
+            <p class="article-text"><span class="point-name">Session Storage:</span> Session Storage Data expires on tab or browser closed. It's one kind of clients Read only data.</p>
         </article>
         <article class="article">
-            <h2 class="article-title">What is Global Scope and Block Scope?</h2>
-            <p class="article-text"></p>
+            <h5 class="article-title">What is Global Scope and Block Scope?</h5>
+            <p class="article-text"><span class="point-name">Global Scope:</span> A variable declared outside a function, becomes GLOBAL.A global variable has Global Scope. All scripts and functions on a web page can access it. </p>
+            <p class="article-text"><span class="point-name">Block Scope:</span> ES6 have let and const keyword, these two keywords provides Block Scope in JavaScript. Variables declared inside a { } block cannot be accessed from outside the block, but if declared with the var keyword can NOT have block scope.</p>
         </article>
         <article class="article">
-            <h2 class="article-title">What is Event Loop in JavaScript?</h2>
-            <p class="article-text"></p>
+            <h5 class="article-title">What is Event Loop in JavaScript?</h5>
+            <p class="article-text"><span class="point-name">Event Loop:</span> JavaScript Engine is single threaded, that means it can run a code at a time. But what happens when a async request send, is called Event Loop, which is actually happens inside JavaScript Engine inside the browser. The webapis store the async code to a task queue, untill the stack is clear. </p>
         </article>
         <article class="article">
-            <h2 class="article-title">How many ways we can get <code>undefined</code></h2>
-            <p class="article-text"></p>
+            <h5 class="article-title">How many ways we can get <code style="color: orange;">undefined</code>?</h5>
+            <p class="article-text">
+                <ol>
+                    <li>Using variable without assigning any value.</li>
+                    <li>Function with no return.</li>
+                    <li>Parameter that is not passed to a Function will be undefined.</li>
+                    <li>When return has nothing on the right side will return undefined.</li>
+                    <li>Property that doesn't exists on an object will give you undefined.</li>
+                    <li>Accessing array elements outside of the index range.</li>
+                    <li>Deleting an element inside an array.</li>
+                    <li>Set a value directly to undefined.</li>
+                </ol>
+            </p>
         </article>
     </div>
 

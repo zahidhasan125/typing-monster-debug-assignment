@@ -33,6 +33,38 @@ body {
 
 }
 
+.article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 15px;
+  font-size: 1.5em;
+  border-radius: 15px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    92.49deg,
+    rgba(255, 255, 255, 0.1) 0.18%,
+    rgba(255, 255, 255, 0.05) 99.85%
+  );
+  backdrop-filter: blur(5px);
+  margin-bottom: 30px;
+}
+
+.article h5 {
+  text-decoration: underline;
+}
+
+.point-name{
+  text-decoration: underline;
+  color: #eb6565;
+}
+
+.article > * {
+  margin-bottom: 15px;
+}
+
 #question {
   height: 100px;
   display: flex;
