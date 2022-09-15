@@ -90,7 +90,7 @@ const gameOver = () => {
   const wordPerMin = wordsInQues/(timeTaken/60)
   resultModal.innerHTML = `
     <h1>Finished!</h1>
-    <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
+    <p>You took: <span class="bold">${Math.round(timeTaken)}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
     <p>Your avarage speed: <span class="bold red">${Math.round(wordPerMin)}</span>/wpm</p>
     <button onclick="closeModal()">Close</button>
@@ -144,5 +144,5 @@ displayHistory();
 setInterval(() => {
   const currentTime = new Date().getTime();
   const timeSpent = (currentTime - startTime) / 1000;
-  document.getElementById("show-time").innerHTML = `${startTime ? parseInt(timeSpent) : 0} seconds`;
+  document.getElementById("show-time").innerHTML = `${startTime ? Math.round(timeSpent) : 0} seconds`;
 }, 1000);
