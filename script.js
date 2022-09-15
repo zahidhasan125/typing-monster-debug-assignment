@@ -79,10 +79,20 @@ const gameOver = () => {
   // make it inactive
   display.classList.add("inactive");
   // show result
+  const wordCount = question.innerText;
+  
+  function countWords(str) {
+    const arr = str.split(' ');
+  
+    return arr.filter(word => word !== '').length;
+  }
+  const wordsInQues = countWords(wordCount);
+  const wordPerMin = wordsInQues/(timeTaken/60)
   resultModal.innerHTML = `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p>Your avarage speed: <span class="bold red">${Math.round(wordPerMin)}</span>/wpm</p>
     <button onclick="closeModal()">Close</button>
   `;
 
